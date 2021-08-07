@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react'
+import './App.css'
+import 'antd/dist/antd.css'; 
+import SignIn from './component/form'
+import { Button } from 'antd'
+class App extends Component {
+    render() {
+        return (
+            <div style={{ width: "100%", height: "100%", display: "flex" }}>
+                <div className="authentication-background">
+                    <div className="authentication-background-overlay" ></div>
+                    <div className="overlay-text">
+                      
+                    </div>
+                </div>
+                <div className="authentication-form-body" >
+                    <SignIn />
+                </div>
+            </div>
+        )
+    }
 }
 
-export default App;
+export default App
